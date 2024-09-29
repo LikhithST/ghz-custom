@@ -1,0 +1,28 @@
+{
+    "proto": "../proto/kuksa/val/v1/val.proto",
+    "call": "kuksa.val.v1.VAL.Set",
+    "total": 10,
+    "rps": 1000,
+    "metadata" : {"trace_id":"{{.RequestNumber}}", "timestamp":"{{.TimestampUnix}}", "request_id":"50sub300pub"},
+    "data": {
+        "updates": [
+            {
+                "entry": {
+                    "path": "Vehicle.Speed",
+                    "value": {
+                        "timestamp": null,
+                        "float": 112
+                    },
+                    "metadata": {
+                        "description":"{{.RequestNumber}}"
+                    }
+                },
+                "fields": ["2", "12"]
+            }
+        ]
+    },
+    "import-paths": [
+        "./"
+    ],
+    "host": "0.0.0.0:55555"
+}

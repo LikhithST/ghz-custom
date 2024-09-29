@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "github.com/bojand/ghz/custom_proto";
+
+package stream_payload;
+
+message Entry {
+    string path = 1;
+    Metadata metadata = 2;
+}
+
+message Metadata {
+    string stream_response_time_ns = 1;
+    string subscription_id = 2;
+}
+
+message Updates {
+    Entry entry = 1;
+}
+
+message ServerStreamResponse {
+    Updates updates = 1;
+}

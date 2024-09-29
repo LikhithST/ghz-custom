@@ -1,0 +1,12 @@
+{
+    "proto": "my.proto",
+    "call": "mycall",
+    "cert": "mycert",
+    "cName": "localhost",
+    "d": {
+        "name": "mydata"
+    },
+    "i": [
+        "/path/to/protos"
+    ]
+}

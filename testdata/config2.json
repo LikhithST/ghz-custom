@@ -1,0 +1,16 @@
+{
+  "name": "pretty-json-test",
+  "max-duration": "3m",
+  "total": 5000,
+  "concurrency": 20,
+  "proto": "../../testdata/greeter.proto",
+  "call": "helloworld.Greeter.SayHello",
+  "binary-file": "../../testdata/hello_request_data.bin",
+  "metadata": {
+    "rn": "{{.RequestNumber}}"
+  },
+  "host": "0.0.0.0:50051",
+  "insecure": true,
+  "output": "pretty.json",
+  "format": "pretty"
+}

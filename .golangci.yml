@@ -1,0 +1,41 @@
+# TODO Look into enabling all with some exception where practical
+# linters:
+#   enable-all: true
+#   disable:
+#     - gochecknoglobals
+#     - dupl
+#     - lll
+issues:
+  exclude-rules:
+    # Exclude lostcancel govet rule specifically for requester.go
+    # Since we purposefully do that. See comments in code.
+    - path: runner/requester.go
+      text: "lostcancel"
+
+    # TODO Look into fixing time.Tick() usage SA1015 in worker.go
+    - path: runner/worker.go
+      text: "SA1015"
+
+    # We intentionally assign nil to err
+    - path: runner/worker.go
+      text: "ineffectual assignment to `err`"
+
+    # Debug log Sync() error check in defer in main
+    - path: cmd/ghz/main.go
+      text: "Error return value of `logger.Sync` is not checked"
+
+    # sync.once copy in pacer test
+    - path: load/pacer_test.go
+      text: "copylocks"
+
+    # TODO fix protobuf deprecated
+    - path: runner/
+      text: 'SA1019: "github.com/golang/protobuf/proto"'
+
+    # TODO fix protobuf deprecated
+    - path: protodesc/
+      text: 'SA1019: "github.com/golang/protobuf/proto"'
+
+    # TODO fix protobuf deprecated
+    - path: runner/
+      text: 'SA1019: "github.com/golang/protobuf/jsonpb" is deprecated'

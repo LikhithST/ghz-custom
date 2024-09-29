@@ -1,0 +1,14 @@
+{
+  "max-duration": "1m",
+  "total": 40,
+  "concurreny": 5,
+  "proto": "../../testdata/greeter.proto",
+  "call": "helloworld.Greeter.SayHello",
+  "data-file": "../../testdata/data.json",
+  "host": "0.0.0.0:50051",
+  "insecure": true,
+  "format": "pretty",
+  "metadata": {
+    "rn": "{{.RequestNumber}}"
+  }
+}

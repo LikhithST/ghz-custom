@@ -1,0 +1,23 @@
+{
+    "proto":  "../proto/kuksa/val/v1/val.proto",
+    "call": "kuksa.val.v1.VAL.Subscribe",
+    "total": 50,
+    "concurrency":6000,
+    "timeout":"30s",
+    "metadata" : {"trace_id":"{{.RequestNumber}}", "timestamp":"{{.TimestampUnix}}", "request_id":"50sub300pub"},
+    "data": {
+        "entries": [
+            {
+                "path": "Vehicle.Speed",
+                "view": "VIEW_ALL",
+                "fields": [
+                    "FIELD_VALUE"
+                ]
+            }
+        ]
+    },
+    "import-paths": [
+        "./"
+    ],
+    "host": "0.0.0.0:55555"
+}

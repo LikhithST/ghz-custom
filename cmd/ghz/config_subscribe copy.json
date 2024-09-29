@@ -1,0 +1,29 @@
+{
+    "proto": "../proto/kuksa/val/v1/val.proto",
+    "call": "kuksa.val.v1.VAL.Subscribe",
+    "total": 50,
+    "concurrency": 1,
+    "concurrency-schedule": "step",
+    "concurrency-start": 5,
+    "concurrency-step": 5,
+    "concurrency-end": 50,
+    "concurrency-step-duration": "5s",
+    "timeout":0,
+    "duration-stop": "close",
+    "stream-call-duration":"3s",
+    "metadata" : {"trace_id":"{{.RequestNumber}}", "timestamp":"{{.TimestampUnix}}"},
+    "rps": 1,
+    "data": {
+        "entries": [
+            {
+                    "path": "Vehicle.Speed",
+                    "view":"VIEW_ALL",
+                    "fields":["FIELD_VALUE"]
+            }
+        ]
+    },
+    "import-paths": [
+        "./"
+    ],
+    "host": "0.0.0.0:55555"
+}

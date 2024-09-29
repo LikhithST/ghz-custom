@@ -1,0 +1,42 @@
+builds:
+  - id: ghz
+    main: ./cmd/ghz
+    binary: ghz
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+  - id: ghz-web
+    main: ./cmd/ghz-web
+    binary: ghz-web
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+archives:
+  - id: ghz
+    replacements:
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+      amd64: x86_64
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+release:
+  prerelease: auto
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+    - '^www:'
+    - '^\[skip ci\]'
