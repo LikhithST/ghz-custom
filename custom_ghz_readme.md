@@ -82,9 +82,9 @@ chmod +x ./ghz
     </ol>
   </div>
   <div style="float: right; width: 45%;">
-    <img src="https://media.github.boschdevcloud.com/user/46206/files/49a873c1-0896-4250-8238-4ea36bc66dc0" alt="Publish Config" width="100%">
+    <img src="./images/49a873c1-0896-4250-8238-4ea36bc66dc0.jpg" alt="Publish Config" width="100%">
     <br>
-    <img src="https://media.github.boschdevcloud.com/user/46206/files/e4c4d7a0-5e2e-4de8-9751-59aaac5e207f" alt="Subscribe Config" width="100%">
+    <img src="./images/e4c4d7a0-5e2e-4de8-9751-59aaac5e207f.jpg" alt="Subscribe Config" width="100%">
   </div>
   <div style="clear: both;"></div>
 </div>
@@ -94,14 +94,14 @@ Note: The combination of `request_id` and `description` forms a unique id for id
 
 ## Metadata used to monitor latency
 
-<img width="1466" alt="kuksa_set_subscribe_postman" src="https://media.github.boschdevcloud.com/user/46206/files/7387d35e-1172-406e-bcd9-364ac496e4f0">
+<img width="1466" alt="kuksa_set_subscribe_postman" src="./images/7387d35e-1172-406e-bcd9-364ac496e4f0.png">
 
 - latency related metadata for publish call is recieved in the metadata of Http respone.
 - latency related metadata for subscribe call is received within the payload of the subscription response.
 
 ## Pictorial representation of end to end latency calculation
 
-<img width="1157" alt="metadata_capture" src="https://media.github.boschdevcloud.com/user/46206/files/da13d82b-56a1-4b2b-a366-d8eaa7cc9980">
+<img width="1157" alt="metadata_capture" src="./images/da13d82b-56a1-4b2b-a366-d8eaa7cc9980.png">
 
 ##  building ghz for arm64 architecture
 
